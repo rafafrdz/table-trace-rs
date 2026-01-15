@@ -1,0 +1,18 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "table-trace-rs"
+path = "src/main.rs"
+
+[dependencies]
+# Internal crates
+analytics = { path = "../../modules/analytics" }
+common = { path = "../../core/common" }
+
+# External crates
+axum = "0.8.4"
+tokio = { version = "1.47.1", features = ["full"] }
+tracing = "0.1.41"
